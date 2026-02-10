@@ -6,7 +6,8 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         build-essential=12.12 \
-        musl-tools=1.2.5-3 && \
+        musl-tools=1.2.5-3 \
+        buildah=1.39.3+ds1-1+b7 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/
 
